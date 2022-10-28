@@ -98,6 +98,9 @@ defmodule ClusterConnectSmartcell do
     error -> error
   end
 
+  def do_execute_remote_command(_target_node, _module, _function, _arguments),
+    do: {:ok, :no_command}
+
   # Privates
   defp parse_value(_field, value), do: value
 
