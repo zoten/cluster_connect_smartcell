@@ -3,7 +3,7 @@ defmodule ClusterConnectSmartcell.MixProject do
 
   def project do
     [
-      app: :cluster_connect_smarctell,
+      app: :cluster_connect_smartcell,
       version: "0.1.0",
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,

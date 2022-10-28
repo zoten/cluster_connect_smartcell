@@ -20,7 +20,7 @@ erl_crash.dump
 *.ez
 
 # Ignore package tarball (built via "mix hex.build").
-cluster_connect_smarctell-*.tar
+cluster_connect_smartcell-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/

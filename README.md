@@ -90,7 +90,7 @@ Feel free to reach me via any means or directly file an issue/PR!
 
 If the use of any of those sources has been deemed inappropriate by the author(s), please feel free to contact me by any means and I'll take proper actions
 
- * [main.css](./lib/assets/cluster_connect_smarctell/main.css) is almost totally copied from wonderful [kino_vega_lite](https://github.com/livebook-dev/kino_vega_lite/blob/02d9220f1c82e2e1848f15a800d187a50c2fdc02/lib/assets/chart_cell/main.css)'s chart_cell original work
- * [main.js](./lib/assets/cluster_connect_smarctell/main.js) and assets loading is totally based on from wonderful [kino_vega_lite](https://github.com/livebook-dev/kino_vega_lite/blob/02d9220f1c82e2e1848f15a800d187a50c2fdc02/lib/assets/chart_cell/main.js)'s chart_cell original work
+ * [main.css](./lib/assets/cluster_connect_smartcell/main.css) is almost totally copied from wonderful [kino_vega_lite](https://github.com/livebook-dev/kino_vega_lite/blob/02d9220f1c82e2e1848f15a800d187a50c2fdc02/lib/assets/chart_cell/main.css)'s chart_cell original work
+ * [main.js](./lib/assets/cluster_connect_smartcell/main.js) and assets loading is totally based on from wonderful [kino_vega_lite](https://github.com/livebook-dev/kino_vega_lite/blob/02d9220f1c82e2e1848f15a800d187a50c2fdc02/lib/assets/chart_cell/main.js)'s chart_cell original work
 
 Any idea on how to make this appropriation more explicit is welcome!
