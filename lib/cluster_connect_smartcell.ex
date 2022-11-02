@@ -1,5 +1,7 @@
 defmodule ClusterConnectSmartcell do
-  @moduledoc false
+  @moduledoc """
+  #{File.read!("README.md")}
+  """
 
   use Kino.JS, assets_path: "lib/assets/cluster_connect_smartcell"
   use Kino.JS.Live
