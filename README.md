@@ -7,12 +7,22 @@ connecting to a remote node in an Elixir cluster and optionally send a `:erpc` c
 
 ### Install
 
-Since the package is not available in [hex](https://hex.pm/) you can `Mix.install` it directly via github
+The package is published in [hex](https://hex.pm/) and you can use it in your livebook setup section as
 
 ``` elixir
 Mix.install([
   # ...
-  {:cluster_connect_smartcell, git: "https://github.com/zoten/cluster_connect_smartcell"}
+  {:cluster_connect_smartcell, "~> 0.0.1"}
+  # ...
+])
+```
+
+otherwise you can test the bleeding edge directly via github
+
+``` elixir
+Mix.install([
+  # ...
+  {:cluster_connect_smartcell, git: "https://github.com/zoten/cluster_connect_smartcell", ref: "master"}
   # ...
 ])
 ```
@@ -78,12 +88,11 @@ Please note I don't know any Vue at the moment, so be patient. I'm also very bad
    * [ ] connection status indicator
    * [ ] make `cookie` field a password field
    * [ ] allow also non-`Elixir.` prefixed modules (-> allow connecting and `:erpc`-ing to erlang nodes)
-  * [ ] is this worth publishing on [hex](https://hex.pm/)?
-  * [ ] introduce credo and set up CI :)
+  * [ ] set up some sort of CI
 
 ### Contributing
 
-> Please note this is still a `draft` kind of project, that's why it is not yet even versioned. However, any help is appreciated from the start!
+> Please note this is still a `draft` kind of project, that's why it is still `< 0.1.x`. However, any help is appreciated from the start!
 
 Feel free to reach me via any means or directly file an issue/PR!
 ### Sources
