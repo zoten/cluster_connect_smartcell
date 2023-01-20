@@ -45,7 +45,7 @@ Fill in the relevant parts and you should be good to go! Please note that:
  * at the moment `Arguments` shall be a manually crafted list. The screenshot in example will result in a call like
 
     ``` elixir
-    :erpc.call(My.Module.Name, :my_function_name, [[1, 2, 3], :argument2, option: true])
+    :erpc.call(:"mynode@cluster_machine", My.Module.Name, :my_function_name, [[1, 2, 3], :argument2, option: true])
     ```
   
     that will call `My.Module.Name.my_function_name/3` as
