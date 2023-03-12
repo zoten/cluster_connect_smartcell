@@ -22,7 +22,7 @@ defmodule ClusterConnectSmartcell do
 
   @impl true
   def handle_connect(ctx) do
-    # Called first time the cliet connects, gives initial state
+    # Called first time the client connects, gives initial state
     payload = %{
       root_fields: ctx.assigns.root_fields
     }
@@ -87,6 +87,38 @@ defmodule ClusterConnectSmartcell do
     {:noreply, ctx}
   end
 
+  # implementations to find out possible bindings
+
+  @impl true
+  def handle_info({:scan_binding_result, data}, ctx) do
+    ctx = assign(ctx, data_options: data)
+
+    broadcast_event(ctx, "update_binding", data)
+
+    {:noreply, ctx}
+  end
+
+  @doc """
+  Try to identify possible autocompletion targets
+
+  possible nodes: atoms contianing "@" character
+  """
+  @impl true
+  def scan_binding(pid, binding, _env) do
+    possible_nodes =
+      binding
+      |> Enum.filter(fn {_key, value} -> is_atom(value) end)
+      |> Enum.filter(fn {_key, value} -> value |> Atom.to_string() |> String.contains?("@") end)
+
+    data = %{
+      possible_nodes: possible_nodes
+    }
+
+    send(pid, {:scan_binding_result, data})
+  end
+
+  # NOTE: this function needs to remain public, so it can be called by generated code
+  # Candidate for refactor :)
   def do_execute_remote_command(target_node, module, function, arguments)
       when is_binary(module) and byte_size(module) > 0 and
              is_binary(function) and byte_size(function) > 0 and
@@ -100,6 +132,8 @@ defmodule ClusterConnectSmartcell do
     error -> error
   end
 
+  # NOTE: this function needs to remain public, so it can be called by generated code
+  # Candidate for refactor :)
   def do_execute_remote_command(_target_node, _module, _function, _arguments),
     do: {:ok, :no_command}
 
