@@ -81,7 +81,7 @@ Please note I don't know any Vue at the moment, so be patient. I'm also very bad
 
  * tests. I know, I should have TDD'ed or something like that, but I really don't know how to test a smartcell right now, nor I wanted to set up cluster testing   in the limited time I had to set up this
  * more features (in random order)!
-    * binding with variables created in livebook's context to use as arguments
+    * ~~binding with variables created in livebook's context to use as arguments~~
     * make the argument list a `arg0`, `arg1`, ... dynamic list instead of relying on the user to set up correctly a list of arguments
     * cluster connection types (`:hidden`, etc)
     * node list retrieved from epmd (for local usage) and after connection
