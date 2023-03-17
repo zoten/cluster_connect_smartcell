@@ -5,7 +5,7 @@ connecting to a remote node in an Elixir cluster and optionally send a `:erpc` c
 
 ## HowTo
 
-### Install
+### Installation
 
 The package is published in [hex](https://hex.pm/) and you can use it in your livebook setup section as
 

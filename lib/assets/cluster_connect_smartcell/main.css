@@ -36,6 +36,8 @@
   
   .root {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     background-color: var(--blue-100);
     padding: 8px 16px;
     margin-bottom: 12px;
@@ -113,15 +115,29 @@
   .root-field {
     display: flex;
     flex-direction: row;
+    flex: 1 1 auto;
     align-items: center;
-    justify-content: end;
+    // justify-content: end;
+    justify-content: start;
   }
   
-  .root-field:first-child {
-    width: 80%;
-    justify-content: start;
-    flex-shrink: 3;
+  .current-values {
+    font-weight: lighter;
+    font-size: x-small;
+    color: gray;
+    line-height: 1.6;
+    margin-left: 10px;
   }
+
+  .current-value {
+    font-size: x-small;
+    color: #d30038;
+    letter-spacing: 1px;
+  }
+
+  /* .root-field:first-child {
+    justify-content: start;
+  } */
   
   .button {
     padding: 0.5rem 1.25rem;
