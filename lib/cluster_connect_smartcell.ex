@@ -169,13 +169,9 @@ defmodule ClusterConnectSmartcell do
 
   defp parse_value(_field, value), do: value
 
-  defp normalize_module_name(module) do
-    if String.starts_with?(module, "Elixir.") do
-      module
-    else
-      "Elixir.#{module}"
-    end
-  end
+  defp normalize_module_name(<<":", rest::binary>> = _module), do: rest
+  defp normalize_module_name(<<"Elixir.", _rest::binary>> = module), do: module
+  defp normalize_module_name(module), do: "Elixir.#{module}"
 
   defp parse_evaluated_arguments!({arguments, bindings}) when is_list(arguments),
     do: {arguments, bindings}
