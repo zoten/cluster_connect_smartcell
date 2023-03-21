@@ -86,8 +86,8 @@ Please note I don't know any Vue at the moment, so be patient. I'm also very bad
     * cluster connection types (`:hidden`, etc)
     * node list retrieved from epmd (for local usage) and after connection
     * connection status indicator
-    * make `cookie` field a password field
-    * allow also non-`Elixir.` prefixed modules (-> allow connecting and `:erpc`-ing to erlang nodes)
+    * make `cookie` field a password field?
+    * ~~allow also non-`Elixir.` prefixed modules (-> allow connecting and `:erpc`-ing to erlang nodes)~~
  * set up some sort of CI
 
 ### Contributing
