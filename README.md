@@ -1,5 +1,7 @@
 # ClusterConnectSmartcell
 
+> ⚠️ this - draft - smartcell's existence has been superseded by the official support for erpc execution via the Remote execution cell in Livebook 0.11.0 (see the [changelog](https://github.com/livebook-dev/livebook/tree/v0.11.0) and PRs [2197](https://github.com/livebook-dev/livebook/pull/2197) and [2217](https://github.com/livebook-dev/livebook/pull/2217) in the official Livebook Repo. This has still been a fun exercise to me :)
+
 `ClusterConnectSmartcell` is a smart cell for [Elixir Livebook](https://livebook.dev) that allows
 connecting to a remote node in an Elixir cluster and optionally send a `:erpc` call.
 
